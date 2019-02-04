@@ -1,25 +1,24 @@
-let box = document.getElementById('box'); // #box
-let btn = document.getElementsByTagName('button');// <button></button>
-let circle = document.getElementsByClassName('circle');// .circle
-let heart = document.querySelector('.heart');
-let boxs = document.querySelectorAll('.heart');
+let btn = document.getElementsByTagName('button'),
+    wrap = document.querySelector('.wrapper'),
+    link = document.querySelector('a');
 
-box.style.backgroundColor = 'blue';
-btn[1].style.borderRadius = '100%';
-
-heart.fofEach(function(item, i, hearts){
-    item.style.backgroundColor = 'blue';
+btn[0].addEventListener("click", function(event)  {
+    let target = event.target;
+    target.style.display = "none";
+    console.log('событие: ' + event.type + ' на элементе: ' + event.target); 
 });
 
-let div = document.createElement('div'),
-    text = document.createTextNode('youd');
+wrap.addEventListener("click", function()  {
+   console.log('событие: ' + event.type + ' на элементе: ' + event.target); 
+});
 
-div.classList.add('black');
+link.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('событие: ' + event.type + ' на элементе: ' + event.target); 
+});
 
-document.body.appendChild(div);
-
-document.body.insertBefore(div, circle[0]);
-
-document.body.replaceChild(div, circle[0]);
-
-div.innerHTML = '<h1>dfdfdffd</h1>';
+btn.forEach(function(item) {
+    item.addEventListener('mouseleavte', function() {
+       console.log('vkli'); 
+    });
+});
