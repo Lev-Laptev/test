@@ -1,15 +1,25 @@
+let box = document.getElementById('box'); // #box
+let btn = document.getElementsByTagName('button');// <button></button>
+let circle = document.getElementsByClassName('circle');// .circle
+let heart = document.querySelector('.heart');
+let boxs = document.querySelectorAll('.heart');
 
+box.style.backgroundColor = 'blue';
+btn[1].style.borderRadius = '100%';
 
-let soldier = {
-    health: 400,
-    armor: 100
-};
+heart.fofEach(function(item, i, hearts){
+    item.style.backgroundColor = 'blue';
+});
 
-let john = {
-    health: 100
-}
+let div = document.createElement('div'),
+    text = document.createTextNode('youd');
 
-john.__proto__ = soldier;
+div.classList.add('black');
 
-console.log(john);
-console.log(john.armor);
+document.body.appendChild(div);
+
+document.body.insertBefore(div, circle[0]);
+
+document.body.replaceChild(div, circle[0]);
+
+div.innerHTML = '<h1>dfdfdffd</h1>';
