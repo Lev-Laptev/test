@@ -1,24 +1,31 @@
-let btn = document.getElementsByTagName('button'),
-    wrap = document.querySelector('.wrapper'),
-    link = document.querySelector('a');
+// let timerId = setTimeout(sayHello, 3000);
 
-btn[0].addEventListener("click", function(event)  {
-    let target = event.target;
-    target.style.display = "none";
-    console.log('событие: ' + event.type + ' на элементе: ' + event.target); 
-});
+// clearTimeout(timerId);
 
-wrap.addEventListener("click", function()  {
-   console.log('событие: ' + event.type + ' на элементе: ' + event.target); 
-});
+// let timerId = setInterval(sayHello, 3000);
 
-link.addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log('событие: ' + event.type + ' на элементе: ' + event.target); 
-});
+// clearTimeout(timerId); 
 
-btn.forEach(function(item) {
-    item.addEventListener('mouseleavte', function() {
-       console.log('vkli'); 
-    });
-});
+// function sayHello(arams) {
+//    console.log('hello');
+// }
+
+// let timerId = setTimeout(function log() {
+//     console.log('hello');
+//     setTimeout(log, 2000);
+// });
+
+// let btnBlock = document.querySelector('.block'),
+//     btns = document.getElementsByTagName('button');
+
+// btnBlock.addEventListener("click",function (event) {
+//     if (event.target && event.target.tagName == 'BUTTON') {
+//         console.log('hello');
+//     } 
+// });
+
+// btnBlock.addEventListener("click",function (event) {
+//     if (event.target && event.target.matches('button.block')) {
+//         console.log('hello');
+//     } 
+// });
