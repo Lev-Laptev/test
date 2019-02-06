@@ -22,16 +22,10 @@ function giveMoney() {
 function loose() {
     console.log("you loose");
 }
-shoot({},
-    function(mark) {
-        console.log("you fun");
-        win(mark, buyBeer, giveMoney);
-    },
-    function(miss) {
-        console.log("you loos");
-        loose();
-    }
-)
+shoot({})
+    .then(mark => console.log("you fun"))
+    .then(win)
+    .catch(loose)
 
 
 
